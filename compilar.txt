@@ -1,1 +1,2 @@
-x86_64-w64-mingw32-gcc main.c -o app.exe -mwindows -static -lshell32
+x86_64-w64-mingw32-windres recurso.rc -O coff -o recurso.o
+x86_64-w64-mingw32-gcc main.c recurso.o -o app.exe -mwindows -static -lshell32
